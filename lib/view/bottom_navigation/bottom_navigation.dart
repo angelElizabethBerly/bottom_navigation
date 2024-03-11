@@ -19,27 +19,28 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return Scaffold(
         // backgroundColor: Colors.blue,
         bottomNavigationBar: BottomNavigationBar(
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            type: BottomNavigationBarType.fixed,
-            onTap: (value) {
-              indexValue = value;
-              setState(() {});
-            },
-            currentIndex: indexValue,
-            items: [
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.home_outlined), label: "Home"
-                  // activeIcon: Icon(Icons.access_alarm_rounded),
-                  ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.lock_clock), label: "Time"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.chat_bubble), label: "Message"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.person_4_outlined), label: "Profile")
-            ],
-            selectedItemColor: Colors.blue),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          onTap: (value) {
+            indexValue = value;
+            setState(() {});
+          },
+          currentIndex: indexValue,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined), label: "Home"
+                // activeIcon: Icon(Icons.access_alarm_rounded),
+                ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.lock_clock), label: "Time"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.chat_bubble), label: "Message"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person_4_outlined), label: "Profile")
+          ],
+          fixedColor: Colors.blue,
+        ),
         body: screen[indexValue]);
   }
 }
